@@ -18,5 +18,10 @@ namespace FlagFacts
             BindingContext = DependencyService.Get<FlagDetailsViewModel>();
             InitializeComponent();
         }
+
+        async void ListView_OnItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            await this.Navigation.PushAsync(new FlagDetailsPage());
+        }
     }
 }
